@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>くるくる。</title>
+    <!--OGP-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:url" content="https://r-40021.github.io/kurukuru" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="くるくるして遊ぶ。" />
+    <meta property="og:description" content="マウスカーソルがくるくる回るのを見る。ただ、それだけ。" />
+    <meta property="og:site_name" content="くるくる。" />
+    <meta property="og:image" content="https://r-40021.github.io/kurukuru/ogp.png" />
+    <!--SEO-->
+    <meta
+        content="最近のPCの中には、マウスカーソルのあの「くるくる」さえ姿を現さないほど高性能なものがあるようです。なんか、寂しい...そこで、マウスカーソルのくるくるを見るためだけのサイトを作りました。一応ダークモードにも対応しています。"
+        name="description">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            transition: background-color .2s ease-out;
+        }
+
+        .waitArea {
+            cursor: wait;
+            width: 100%;
+            height: 100vh;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #202b38;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="waitArea"></div>
+    <script>
+        const ua = navigator.userAgent;
+        if (ua.match(/(iPhone|iPad|iPod|Android)/) || (ua.match(/Mac OS X/) && 'ontouchend' in document) || (navigator.userAgentData && navigator.userAgentData.mobile)) {
+            alert("このサイトはスマホ・タブレットには対応していません。\nPCからアクセスしてください。")
+        }
+    </script>
+</body>
+
+</html>
