@@ -7,3 +7,5 @@
 - PC (Windows、macOS、Linux、Chrome OS)
 
 ※スマホ・タブレットには対応していません
+
+![くるくるを永遠に見られるサイト](/ogp.png)
